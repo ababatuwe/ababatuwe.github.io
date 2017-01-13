@@ -1,0 +1,135 @@
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.selectboxit/3.8.0/jquery.selectBoxIt.css"> <!--select boxit css-->
+	<link rel="stylesheet" type="text/css" href="css/landing.css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'> <!--Roboto from google fonts-->
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js "></script> 
+	<script src=" http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js "></script> 
+	<!--<script src=" http://gregfranko.com/jquery.selectBoxIt.js/js/jquery.selectBoxIt.min.js "></script>-->
+	
+	<style>
+		#newTagLine{
+			font-size: 20px;
+			font-weight: bold;
+			letter-spacing: 4px;
+			margin-bottom: 22px;
+		}
+		
+		.tagHeader{
+			margin-bottom:0;
+			position: absolute;
+			top: 56px;
+			left: 142px;
+		}
+		
+	</style>
+	</head>
+	
+	<body class="gradient">
+	<!--<img src="landingPage.png"/>-->
+	<!--HEADER-->
+	<header id="menu">
+		<!--Nav Bar-->
+		<!--<div id="navBar">
+			<ul class="links">
+				<li>SEND MONEY</li>
+				<li>WHY HYPERWIRE</li>
+				<li>HOW IT WORKS</li>
+				<li>LOGIN</li>
+			</ul>
+		</div>-->
+		<!--Logo-->
+		<div id="logoContainer">
+			<img src="images/kunle-fill.svg" alt="Hyperwire Logo">
+		</div>
+		<div id="tagLine" class="tagHeader"> HYPERWIRE</div>
+	</header><!--header ends-->
+	
+	<!--CONTENT-->
+	<div id="content">
+	
+		<!--SIDE TEXT-->
+		<div id="sideText">
+			<header id="newTagLine"> <!--Finally, a cheaper and faster way to send money to Africa-->
+				Finally,<br/> a faster and cheaper way to send money to Africa.
+			</header>
+			<div id="subText">
+				<p>Send money and easily purchase goods and services across Africa with a simple, secure , and speedy digital money transfer.</p>
+				<p>The cheapest way to send money between anyone in Canada and Africa is here.</p>
+			</div>
+		</div> <!--side content ends-->
+		
+		<!--CONVERTER-->
+		<div id="converterContainer">
+			<div class="converter">
+				<div id="textContainer">
+				
+					<!--Send Container-->
+					<div id="sendContainer" class="currencyInputContainer">
+						<div class="converterTitle">SEND</div>
+						<div class="converterAmount">
+							<input type="text" title="Enter amount to send"/>
+						</div>
+						<div class="currencyType">
+							<select>
+								<option > CANADIAN DOLLARS</option>
+							</select>
+						</div>
+					</div><!--receive ends-->
+					
+					<!--Divider-->
+					<div id="dividerContainer">
+						<div id="divider"></div>
+						<div id="dividerCircle"></div>
+					</div><!--divider container ends--->
+					
+					<!--Receive Container-->
+					<div id="receiveContainer" class="currencyInputContainer">
+						<div class="converterTitle">RECEIVE</div>
+						<div class="converterAmount">
+							<input type="text" readonly/>
+						</div>
+						<div class="currencyType">
+							<select>
+								<option> KENYAN SHILLINGS </option>
+								<option> NIGERIAN NAIRA</option>
+								<option> UGANDAN SHILLINGS</option>
+							</select>
+						</div>
+					</div><!--receive container ends-->
+					
+					<!--Send Container-->
+					<div id="sendMoneyContainer">
+						<div id="sendMoneyText">JOIN BETA</div> <!--demo versions-->
+					</div>
+				</div>
+			</div>
+			<div class="converter shadow"></div>
+		</div> <!--converter ends-->
+		
+		<div class="clearfix"></div>
+	</div><!--content ends-->
+	
+	<!--FOOTER-->
+	<footer class="darkerGradient">
+		<div class="copyRight">&copy;HYPER AFRICA Inc.</div>
+	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.selectboxit/3.7.0/jquery.selectBoxIt.min.js"></script><!--select boxit jquery library-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script><!--jquery library-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script><!--jquery library-->
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.selectboxit/3.7.0/jquery.selectBoxIt.min.js"></script>--><!--select boxit jquery library-->
+	<!--<script type="text/javascript" src="js/landing.js"></script>-->
+	<script>
+			$("#sendContainer input").keypress(function(){
+			var inputText = $("#sendContainer input").val();
+			//alert(inputText);
+			$("#receiveContainer input").val(inputText * 2400);
+		});
+		
+	</script>
+
+	</body>
+</html>

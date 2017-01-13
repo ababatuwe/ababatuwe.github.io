@@ -1,0 +1,239 @@
+/*Rest deafult setting*/
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body{
+	font-family: "Roboto";
+	letter-spacing: 1px;
+	font-size: 14px;
+	/* overflow:hidden; */
+}
+
+#confirmForm.formBody{
+	border:1px solid #979797;
+	border-radius:20px;
+	width:440px;
+	height:352px;
+	background-color:white;
+	color: black;
+	/*margin-top: 10px;*/
+}
+
+#confirmForm .content{
+	margin:40px 50px;
+	margin: 32px 50px;
+	    margin: 20px 50px;
+}
+
+#confirmForm #formHeader{
+	height:70px;
+	width:70px;
+	border-radius:50%;
+	background-color:#6bd3d1;
+	margin: 0 auto;
+	position:relative;
+}
+
+/*checkmarck icon*/
+#confirmForm #formHeader span{
+	position: absolute;
+    font-size: 46px;
+    top: 12px;
+    right: 12px;
+}
+
+#confirmForm .bold{
+	font-weight:700;
+}
+
+/*PART OF FORM FILLED OUT BY USER*/
+#confirmForm .formContent{
+	/*margin: 30px 26px 46px 26px;
+	margin:40px 50px;*/
+	margin-top: 20px;
+    margin-bottom: 30px;
+	margin: 20px 0 30px 0;
+}
+
+
+/*greeting*/
+#confirmForm #greeting{
+	width:155px;
+	margin:0 auto;
+	margin-bottom:20px;
+	margin-bottom: 13px;
+}
+
+#confirmForm #message{
+	text-indent: 25px;
+	width:332px;
+	text-align: center;
+}
+
+/*CONTAINER FOR EACH ROW OF THE FORM*/
+#confirmForm .formElementContainer{
+	width:302px;
+	margin-bottom: 31px;
+	margin-bottom: 22px;
+}
+
+/*short inputBox - container for both the input and the label*/
+#confirmForm  .shortInputBox{
+	width:148px;
+	display:inline-block;
+}
+
+#confirmForm .longInputBox{
+	width:298px;
+}
+
+/*all the labels on the form*/
+#confirmForm .formContent label{
+	position: relative;
+    left: 19px;
+}
+
+/*left aligned labels for name and email*/
+#confirmForm .formContent label .leftAlignedText{
+	text-align:left;
+}
+
+/*all form input element*/
+#confirmForm .formInputContainer{
+    border-radius: 23px;
+    height: 43px;
+    /* display: inline-block; */
+    position: relative;
+    margin-top: 3px;
+}
+
+/*short input container -  name, date*/
+#confirmForm .shortInputBox .formInputContainer{
+	width:147px
+	
+}
+/*style for name and email address input element*/
+#confirmForm .formInputContainer.outline{
+	border:1px solid #1a3a64;
+}
+
+/*container for form input thats light blue*/
+#confirmForm .formInputContainer.noOutline{
+	height:45px;/*accounts for no border*/
+}
+/*container for form input thats light blue*/
+#confirmForm .formInputContainer.noOutline, #confirmForm .formInputContainer.noOutline select{
+	background-color:#afdbdf;
+}
+
+/*all form input type text*/
+#confirmForm .formInputText{
+	width: 108px;
+    border-radius: 23px;
+    position: absolute;
+    top: 13px;
+    right: 17px;
+    text-align: center;
+	outline:none;
+}
+/*User's Name info*/
+#confirmForm .formInputName{
+
+}
+
+/*email input field*/
+#confirmForm #emailContainer .formInputText{
+	width: 260px;
+}
+
+#confirmForm #dateContainer .formInputContainer:after {
+	position: absolute;
+	font-family: 'FontAwesome';
+	top: 13px;
+	left: 104px;
+	top: 4px;
+	left: 114px;
+	content: "\f107";
+	font-size: 30px;
+	color: #35577a;
+	color:#252e2f;
+}
+
+/*select options*/
+#confirmForm select {
+	position:relative;
+	color: #252e2f;
+    text-indent: 10px; /*or     padding-left: 10px;*/
+	/*get rid of default arrow*/
+	-webkit-appearance:none;
+	-moz-appearance:none;
+}
+
+#confirmForm select:hover{
+	cursor:pointer;
+}
+
+/*long form container selec*/
+#confirmForm #countryContainer .longInputBox select{
+	width: 245px;
+	text-indent: 81px;
+}
+
+#confirmForm #countryContainer .formInputContainer span{
+	position:absolute;
+	top:5px;
+	left: 261px;
+	font-size: 30px;
+    z-index: 1;
+}
+
+/*submit button container*/
+#confirmForm #submitContainer .shortInputBox{
+	position: relative;
+    left: 50px;
+	left:65px;
+    width: 203px;
+	left: 19px;
+    width: 203px;
+    /* margin: 0 auto; */
+    top: -20px;
+}
+
+#confirmForm #submitContainer .formInputContainer{
+	background-color: #1a3a64;
+    color: white;
+    outline: none;
+    border: none;
+    width: 203px;
+
+}
+
+/*submit button text*/
+#confirmForm #submitContainer .formInputContainer div{
+	width: 50px;
+    height: 17px;
+    margin: 0 auto;
+    position: absolute;
+    position: relative;
+    top: 30%;
+    top: 26%;
+	top: 9%;
+	top: 0.5px;
+}
+
+#confirmForm #submitContainer:hover{
+	cursor:pointer;
+}
+
+
+#closeConfirm .formInputContainer:hover{
+	cursor: pointer;
+    box-shadow: 0 0 2px rgba(0,0,0,.12), 0 2px 2px rgba(0,0,0,.2);
+    background-color: #234b80;
+}

@@ -1,0 +1,917 @@
+/*Rest deafult setting*/
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+
+/*BODY*/
+body{
+	/*background-color:blue;*/
+	font-family: "Roboto";
+	font-weight: 400;
+	color:white;
+	letter-spacing: 1px;
+	padding-bottom: 52px;
+	position:relative;
+	min-height: 100%;
+	margin:0;
+	overflow-y: visible;
+}
+
+body:hover{
+	cursor:default;
+}
+.gradient{
+  
+  background: #2f5988; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #2f5988 , #5fbbc2); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #2f5988, #5fbbc2); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #2f5988, #5fbbc2); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #2f5988 , #5fbbc2); /* Standard syntax */
+}
+
+/*override template*/
+section{
+	padding:0;
+}
+
+[class*="span"] {
+	padding:0;
+}
+
+/*.container{
+	width: 93.75%;
+	width:75%;
+}*/
+
+
+.clearfix{
+	clear:both;
+}
+
+.clearfix:after{
+	content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+/*HEADER
+--------------------------------------------- */
+
+header::after{
+	content:" ";
+	display:block;
+	clear:both;
+}
+
+/**Menu**/
+#menuRow{
+	height:40px;
+}
+
+#menu{
+	float:right;/*float colum with menu to right*/
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#navBar{
+	height:40px;
+	/*width: 612px;*/
+	/*float:right;*/
+	font-size: 14px;
+    font-size: 0.875rem;/*14px in normal screen*/
+}
+
+#navBar ul{
+	position:relative;
+	bottom:-20px;
+}
+
+#navBar li{
+	display:inline;
+	padding-left:1.5em;
+	box-sizing:border-box;
+}
+
+#navBar li:hover{
+	cursor:pointer;
+	font-weight:bold;
+}
+
+/**LOGO**/
+#logoContainer{
+    width: 75.90%;
+	width:80px;
+	width:70px;/*px so doesnt logo grow or shrink with screen size*/
+}
+
+#logoContainer img{
+width: 100%;
+}
+
+
+/* Content
+--------------------------------------------- */
+
+section#content {
+	padding: 0;
+}
+
+#content{
+	margin-top:42px;
+	position:relative;
+}
+
+.overflowfix {
+	overflow: hidden;/*stops parent div from collapsing*/
+}
+/*LEFT SIDE TEXT*/
+
+#sideTextDiv{
+	padding:0 35px;
+}
+#sideText{
+	/*height:176px;*/
+	/*width: 345px;*/
+	/*padding-left:106px;*/
+	/*float:left;*/
+	/*margin-right:103px;
+	max-width: 46.02%;*/
+	width:335.71px;
+}
+
+#tagLine{
+	font-size: 52px;
+	font-size: 72px;
+	font-size: 2.9rem;
+    font-weight: bold;
+	letter-spacing: 5px;
+	margin-bottom: 22px;
+	text-align: left;
+	text-indent: -28px;
+}
+
+#sideText p:first-child{
+	margin-bottom:13px;
+}
+
+#subText{
+	font-size:14px;
+}
+#converterDiv{
+	padding-right: 35px;
+}
+
+/*RIGHT SIDE CONVERTER*/
+#converterContainer{
+	float: right;
+    height: 345px;
+    height: 365px; /*so that the drop down is within the container*/
+    /* position: absolute; */
+    position: relative;
+    /* right: 120px; */
+    color: #1a3a64;
+    /* max-width: 62.24%; */
+    /* width: 91%; */
+    /* width: 85%; */
+    padding-right: 30px;
+	    top: 5px;
+}
+
+.converter{
+    height: 274px;
+    /* height: 324px; */
+    /* width: 610px; */
+    border-radius: 14px;
+    width: 91.5%;
+    height: 93%;
+    width: 493px;
+    height: 323px;
+}
+
+.converter.main{
+	background-color: white;
+	box-shadow: 2px 3px 10px 1px #4b8894, -2px 3px 10px 1px #4b8894, 0px 3px 20px 4px #4b8894;
+	box-shadow: 12px 11px 4px 3px #6bd3d1, inset 0px 0px 4px #2f5988;
+	box-shadow:12px 11px 0px 3px #6bd3d1, inset 0px 0px 3px #2f5988;
+}
+
+/*Converter Shadow Box*/
+.converter.shadow{
+	position: absolute;
+    /* position: relative; */
+    top: 14px;
+    right: 37px;
+    right: 11px;
+    background-color: #6bd3d1;
+    z-index: -1;
+    box-shadow: 5px 5px 5px #4b8894;
+}
+
+
+#textContainer{
+	/*padding-top: 38px;
+    padding-left: 48px;
+    padding-right: 48px;*/
+	/*move text container down to accomodate longer converter*/
+	position: relative;
+    /*top: 25px;*/
+	padding: 5%;
+	padding: 10%;
+	padding: 13%;
+	padding: 11% 10%;
+}
+
+.converterTitle{
+	font-size:20px;
+	font-weight:bold;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.currencyInputContainer{
+	display:inline-block;
+	float:left;
+	width:250px;
+	width: 243px;
+	width:42.5%;
+	width:45.5%;
+	width:46.9%;
+}
+
+#receiveContainer {
+	/*position: relative;
+    right: 14px;*/
+}
+
+/*Currency Input*/
+.converterAmount input{
+	/*width: 240px;
+	height: 50px;
+	padding: 30px 0;
+	position: relative;
+    top: 12px;*/
+	outline:none;
+	color: #1a3a64;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-align: center;
+    background-color: #edf9f9;
+    border-radius: 6px;
+	width: 100%;
+    height: 18%;
+	padding:0 4%;
+}
+
+
+#receiveContainer .converterAmount input{
+	/*position: relative;
+	right: -19px;*/
+}
+
+/*Currency Type*/
+.currencyType {
+   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+   /*height: 29px;
+   width: 240px;
+   margin-top:	12px;*/
+   overflow: hidden;
+   width: 100%;
+   height: 10%;
+   margin-top: 8px;
+    border-radius: 6px;
+	/*add back*/
+    /*box-shadow: 0 0 2px rgba(0,0,0,.12), 0 2px 2px rgba(0,0,0,.2);*/
+	    height: 13%;
+		/*border: 1px solid rgba(0,0,0,.12);*/
+}
+
+#receiveContainer .currencyType {
+	/*position: relative;
+    right: -19px;*/
+}
+
+/*suppose to have effect when currenct clicked*/
+/*.dropdown a:focus ~ .currencyType{
+	cursor:pointer;
+	 box-shadow: 0 0 2px 3px rgba(0,0,0,.12), 0 2px 2px rgba(0,0,0,.2);
+}
+*/
+.currencyType:hover {
+	cursor:pointer;
+	 box-shadow: 0 0 2px 3px rgba(0,0,0,.12), 0 2px 2px rgba(0,0,0,.2);
+	 box-shadow: 0 0 2px 1px rgba(0,0,0,.12), 0 2px 2px rgba(0,0,0,.2);
+	 box-shadow: 0 0 2px 2px rgba(0,0,0,.12), 0 2px 2px rgba(0,0,0,.2);/*medium spread*/
+}
+.currencyType select {
+   background: transparent;
+   background-color: white;
+   border: none;
+   font-size: 14px;
+   height: 35px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   font-weight:bold;
+   width: 240px;
+   outline: none;
+   color: #1a3a64;
+   text-align: center;
+       width: 100%;
+   
+}
+
+select:hover{
+	cursor:pointer;
+}
+
+/*johns custom select*/
+
+      .navbar {
+        width: 100%;
+        background-color: white;
+        /*height: 30px;*/
+        color: #1a3a64;
+		/*border-radius:6px;*/
+		
+      }
+ .navbar .nav {
+        margin: 0;
+        padding: 0;
+        /*float: left;*/
+        list-style-type: none;
+      }
+      
+      .navbar .nav li.nav-item {
+        /*float: left;*/
+				padding:8px 0;
+      }
+      
+      .navbar .nav li.nav-item > a {
+        display: inline-block;
+       /*
+	   padding: 15px 20px;*/
+        /*height: 50px;
+       /* line-height: 50px;*/
+        color: #1a3a64;
+        text-decoration: none;
+		width: 100%;
+		outline:none;
+		/*background-color:gray;*/
+		/*border-radius: 6px;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;*/
+		/*border:1px solid #dae7e9;*/
+		/*box-shadow: 1px -5px 16px 1px #4b8894;
+		box-shadow: 0 0 2px rgba(0,0,0,.12), 0 2px 2px rgba(0,0,0,.2);*/
+		
+      }
+      
+      .navbar .nav li.nav-item > a:hover {
+        /*background-color: #333;*/
+		/*background-color:gray;*/
+		    /*border-radius: 6px;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;*/
+			/*border:1px solid #dae7e9;*/
+		    /*box-shadow: 1px -5px 16px 1px #4b8894;
+			    box-shadow: 0 0 2px rgba(0,0,0,.12), 0 2px 2px rgba(0,0,0,.2);*/
+				outline:none;
+      }
+      
+      .dropdown a:focus {
+        /*background-color: #333;*/
+      }
+      
+	  /*show and animate drop down container*/
+      .dropdown a:focus ~ .dropdown-container {
+        max-height: 500px;
+        transition:max-height 0.3s ease-in; /*changed from .5s*/
+        -webkit-transition:max-height 0.3s ease-in;
+        -moz-transition:max-height 0.3s ease-in;
+		/*0.0001s*/
+      }
+      
+	  	  /*flag icons*/
+	  .flag-icon{
+		top: -12px;
+		right: -20px;
+		margin-right: 1%;
+	  }
+	  .currencyNameContainer .fa-angle-down{
+		      font-size: 24px;
+			  top: -9px;
+    position: relative;
+	  }
+	  .currencyName{
+		width: 60%;
+		display: inline-block;
+		font-size: 12px;
+		line-height: 15px;
+		text-align: center;
+		font-weight:bold;
+	  }
+      .dropdown-container {
+        position: absolute;
+        top: 80px;
+		top: 188px;
+		top: 202px;
+       max-height: 0;
+        overflow: hidden;
+        background: #000;
+        color: #fff;
+		z-index:1;
+		border-radius:6px;
+		margin: 2px 0 0;
+		background-color: #FFF;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+		/*box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);*/ /*add on click*/
+		/*top: 42px;*/
+      }
+      
+      .dropdown-container a {
+        color: #fff;
+        text-decoration: none;
+      }
+      
+      .dropdown-menu {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+		margin-top: 7px;/*so extra space visible on hover of li*/
+			/*bottom margin, rather padding didnt show becuz receive div pushed further than converter container*/
+      }
+      
+      .dropdown-menu li a {
+        display: inline-block;
+        /*min-width: 200px;*/
+        padding: 15px 20px;
+		padding: 15px 8.5px;
+		padding: 8px 14.5px;
+        /*border-bottom: 1px solid #333;*/
+		    width: 100%;
+      }
+	  
+	  #currencySendType.dropdown-menu li a  {
+		  padding:8px 11.5px;
+	  }
+      
+      .dropdown-menu li a:hover {
+        text-decoration: none;
+        background: #333;
+		background-color: #EEEEEE;
+		background-color: #d6d5d5;
+		background-color: #edf9f9;
+		cursor:pointer;
+      }
+	  
+	  .dropdown-menu-item .currencyNameContainer{
+		position: relative;
+		right: 1px;
+	  }
+	  
+	   #receiveContainer.dropdown-menu-item .currencyNameContainer{
+		position: relative;
+		right: 1px;
+	  }
+	  .dropdown-menu .flag-icon{
+		right: -1px;
+	  }
+	  
+	  .dropdown-menu .currencyName{
+		position: relative;
+		right: 10px;
+		color:#1a3a64;
+	  }
+	  
+	  
+	  
+
+#dividerContainer{
+	display:inline-block;
+	float:left;
+	position: relative;
+    right: -7px;
+    padding: 0 .5%;
+	top: -15px;
+}
+#divider{
+	background-color:#6bd3d1;
+	height:125px;
+	height: 50%;
+	height: 49%;
+	height: 56%;
+	width:2px;
+	display:inline-block;
+}
+
+#dividerCircle{
+	background-color:#6bd3d1;
+	height:10px;
+	width:10px;
+	border-radius:50%;
+	display:inline-block;
+	position: relative;
+    right: 11px;
+	/* right: 10px; */
+    bottom: -1px;
+}
+
+#sendMoneyContainer{
+	background-color: #1a3a64;
+    color: white;
+    border-radius: 30px;
+    height: 45px;
+    width: 214px;
+    margin: 0 auto;
+    position: relative;
+    /*bottom: -30px;*/
+    font-weight: bold;
+	height: 13.9%;
+    width: 48.2%;
+	bottom: -11px;
+	bottom: -13px;
+	bottom: -0px;
+}
+
+#sendMoneyContainer:hover{
+	cursor:pointer;
+	box-shadow: 0 0 2px rgba(0,0,0,.12), 0 2px 2px rgba(0,0,0,.2);
+	background-color:#234b80;
+}
+
+#sendMoneyText{
+	margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 13px;
+}
+
+/*FOOTER*/
+footer{
+	width: 100%;
+    height: 52px;
+    position: absolute;
+    bottom: 0px;
+	background-color: #4888a9;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.darkerGradient{
+	/*colors from left to right*/
+	background: #2c5585; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left, #2c5585 , #4e95b0); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, #2c5585, #4e95b0); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, #2c5585, #4e95b0); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, #2c5585 , #4e95b0); /* Standard syntax */
+}
+
+footer div{
+	margin:auto 0;
+	position: relative;
+    top: 20px;
+	text-align:right;
+	font-size:12px;
+	margin-right:30px;
+	float:right;
+	cursor:default;
+}
+
+footer #contactUs a{
+	color:white;
+	text-decoration:none;
+}
+
+footer #contactUs:hover{
+	font-weight:bold;
+}
+
+footer div:hover{
+	
+}
+
+
+
+
+/* Features List
+--------------------------------------------- */
+
+
+/*RESPONSIVENESS
+----------------------------------------------*/
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+	
+	#tagline{
+		font-size: 1.9rem;
+		text-align:center;
+	}
+	
+	.container{
+		width:100%;
+		/*width: 750px;*/
+		padding: 0 20px;
+	}
+	
+	[class*="span"] {
+		width: 100%;
+		float: none;
+		clear:both;
+	}
+	
+	#sideText{
+		margin: 0 auto;
+		width: 100%;
+	}
+	
+	#converterDiv{
+		padding-right:0;
+	}
+	
+	#converterContainer{
+		margin: 0 auto;
+		width: 254px;
+		float: none;
+		width:70%;
+		width: 100%;
+		padding-right:0;
+	}
+	
+	.converter{
+		width: 230px;
+		height: 150px;
+		width:94%;
+		height:70%;
+	}
+	/*.converter.main{
+		height: 290px;
+		width: 420px;
+	}*/
+	.converter.shadow{
+		right: 8px;
+		right: 10px;
+		right: 7px;
+	}
+	
+	#converterDiv{
+		margin-top: 40px;
+	}
+	
+	#textContainer{
+		padding: 5%;
+	}
+	
+	#sendMoneyContainer{
+		width: 45.9%;
+	}
+	
+	.currencyInputContainer{
+	width: 44.9%;}
+	
+	.currencyType select{
+		font-size:12px;
+	}
+	
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 764px){
+	
+	#tagline{
+		font-size: 2.5rem;
+		text-align:center;
+	}
+	
+	.container{
+		width:100%;
+		/*width: 750px;*/
+		padding: 0 20px;
+	}
+	
+	[class*="span"] {
+		width: 100%;
+		float: none;
+		clear:both;
+	}
+	
+	#sideText{
+		margin: 0 auto;
+		width: 100%;
+	}
+	
+	#converterDiv{
+		padding-right:0;
+	}
+	
+	#converterContainer{
+		margin: 0 auto;
+		width: 348px;
+		float: none;
+		width: 70%;
+		width: 94%;
+		padding-right:0;
+	}
+	
+	.converter{
+		width: 320px;
+		height: 190px;
+		width:94%;
+		width:100%;
+		height:70%;
+	}
+	/*.converter.main{
+		height: 290px;
+		width: 420px;
+	}*/
+	.converter.shadow{
+		right: 8px;
+		right: 10px;
+		right: 12px;
+	}
+	
+	#converterDiv{
+		margin-top: 40px;
+	}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1010px){
+	
+	#tagline{
+		font-size: 2.9rem;
+		font-size: 2.5rem;
+		text-align:center;
+	}
+	
+	.container{
+		width:100%;
+		width: 750px;
+		padding: 0 10px;
+	}
+	
+	[class*="span"] {
+		width: 100%;
+		float: none;
+		clear:both;
+	}
+	
+	#sideText{
+		margin: 0 auto;
+		width: 100%;
+	}
+	
+	#sideTextDiv {
+    padding: 0;
+	}
+	
+	#sideText{
+		margin: 0 auto;
+		width: 100%;
+	}
+	
+	#converterDiv{
+		padding-right:0;
+	}
+	
+	#converterContainer{
+		margin: 0 auto;
+		width: 520px;
+		float: none;
+		width: 69.33%;
+		padding-right:0;
+	}
+	
+	.converter{
+		width:94%;
+		height:70%;
+		height:82%;
+	}
+	.converter.shadow{
+		right: 8px;
+		right:5px;
+	}
+	
+	#converterDiv{
+		margin-top: 40px;
+	}
+	
+	
+	#textContainer{
+		padding: 8%;
+	}
+	
+	#sendMoneyContainer{
+		    height: 13.9%;
+		width: 43.2%;
+		width: 49.2%;
+		bottom: -16px;
+	}
+	
+	#sendMoneyText{
+		top: 5px;
+		top: 11px;
+	}
+	
+	.dropdown-container{
+		top:167px;
+	}
+
+}
+
+@media screen and (min-width: 1010px) {
+	
+	#tagline{
+		font-size: 2.4rem;
+		text-align:center;
+	}
+	
+	.container{
+		width:97%;
+		width:993.28px;
+		width: 940px;
+	}
+	#sideTextDiv{
+		padding:0 10px;
+	}
+	
+	#converterDiv{
+		padding-right:10px;
+	}
+}
+@media screen and (min-width: 1033px) {
+	
+	#tagline{
+		font-size: 2.4rem;
+	}
+	
+	.container{
+		width:97%;
+		width:993.28px;
+		width: 1026.28px;
+		width: 950px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	
+	#tagline{
+		font-size: 2.9rem;
+		font-size: 2.4rem;
+	}
+	
+	.container{
+		width:85%;
+		width:75%;
+		/* width:1020px; */
+		width:970px;
+	}
+}
+
+@media screen and (min-width: 1366px) {
+	
+	#tagline{
+		font-size: 2.9rem;
+		font-size: 2.4rem;
+	}
+	
+	.container{
+		width:75%;
+		width:70%;
+		/*width:1026px;*/
+		width: 956px;
+	}
+	
+	.container#logo{
+		width: 996px;
+	}
+}
+/*@media screen and (max-width: 768px) {
+	.span1#logoDiv {
+		width: 8.3333333333%;
+		float: none;
+	}
+}*/
+
+/*only specfic spans become 100%*/
+@media screen and (max-width: 768px) {
+	[class*="span"] {
+		width: 100%;
+		float: none;
+	}
+}

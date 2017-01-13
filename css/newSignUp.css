@@ -1,0 +1,274 @@
+/*Rest deafult setting*/
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body{
+	font-family: "Avant";
+	letter-spacing: 1px;
+	font-size: 14px;
+	/* overflow:hidden; */
+}
+
+@font-face{
+	font-family: "Avant";
+	src:url('../fonts/ITCAvantGardePro-Bk.otf') format('opentype');
+	/*url('../fonts/Avant Garde Gothic Pro & Alt/AvantGardeGothicPro/ITCAvantGardePro-Bk.otf') format('opentype'),
+	url('../fonts/Avant Garde Gothic Pro & Alt/Avant Garde Alternatives/Avant-Garde Alternates/AvantGardeCapsAlts-Medium.ttf') format('truetype');*/
+}
+
+#signUpForm.formBody{
+	border:1px solid #979797;
+	border-radius:20px;
+	width:560px;
+	height:618px;
+	background-color:white;
+	color:black;
+	/*margin-top: 10px;*/
+}
+
+.content{
+	margin:50px 100px;
+	margin: 40px 100px 50px 100px;
+}
+
+#formHeader{
+	width:360px;
+	text-align:center;
+}
+
+.bold{
+	font-weight:700;
+}
+
+/*PART OF FORM FILLED OUT BY USER*/
+.formContent{
+	margin: 30px 26px 46px 26px;
+	margin: 26px 26px 46px 26px;
+}
+
+/*CONTAINER FOR EACH ROW OF THE FORM*/
+.formElementContainer{
+	width:302px;
+	margin-bottom: 31px;
+}
+
+/*short inputBox - container for both the input and the label*/
+.shortInputBox{
+	width:148px;
+	display:inline-block;
+}
+
+.longInputBox{
+	width:298px;
+}
+
+/*all the labels on the form*/
+.formContent label{
+	position: relative;
+   /* left: 19px;*/
+	top: 5px; /*reduced space bw label and input*/
+}
+
+.formContent .shortInputBox label{
+	left:-14px;
+}
+
+.formContent .longInputBox label{
+	left: -72px;
+}
+
+#countryContainer .longInputBox label{
+	left:10px;
+}
+
+/*left aligned labels for name and email*/
+.formContent label .leftAlignedText{
+	text-align:left;
+}
+
+/*all form input element*/
+.formInputContainer{
+    border-radius: 23px;
+    height: 43px;
+    /* display: inline-block; */
+    position: relative;
+    margin-top: 3px;
+}
+
+/*short input container -  name, date*/
+.shortInputBox .formInputContainer{
+	width:147px
+	
+}
+/*style for name and email address input element*/
+.formInputContainer.outline{
+	/*border:1px solid #1a3a64;*/
+}
+
+/*container for form input thats light blue*/
+.formInputContainer.noOutline{
+	height:45px;/*accounts for no border*/
+}
+/*container for form input thats light blue*/
+.formInputContainer.noOutline, .formInputContainer.noOutline select{
+	background-color:#afdbdf;
+	border: none;
+}
+
+/*all form input type text*/
+.formInputText{
+	width: 108px;
+    border-radius: 23px;
+    position: absolute;
+    top: 13px;
+    right: 17px;
+    text-align: center;
+	outline:none;
+	border: 1px solid #1a3a64;
+}
+/*making input field same size as div to color streads through on focus*/
+input.formInputText{
+	width: 145px;
+    height: 41px;
+	top: 0px;
+    right: 0px;
+}
+
+#emailContainer input.formInputText{
+	    width: 296px;
+    height: 41px;
+}
+
+ input.formInputText:hover{
+
+	/* background-color: rgba(194, 240, 244, 0.43); */
+	border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+    box-shadow: 0 0 4px #9ecaed;
+ }
+ 
+input.formInputText:focus{
+	border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed; /*focus has more spread*/
+}
+
+/*email input field*/
+#emailContainer .formInputText{
+	width: 260px;
+}
+
+#dateContainer{
+	margin-bottom: 25px;
+}
+#dateContainer .formInputContainer:after {
+	/*position: absolute;
+	font-family: 'FontAwesome';
+	top: 13px;
+	left: 104px;
+	top: 4px;
+	left: 114px;
+	content: "\f107";
+	font-size: 30px;
+	color: #35577a;
+	color:#252e2f;*/
+}
+
+/*select options*/
+select {
+	position:relative;
+	color: #252e2f;
+    text-indent: 10px; /*or     padding-left: 10px;*/
+	/*get rid of default arrow*/
+/*	-webkit-appearance:none;
+	-moz-appearance:none;*/
+}
+
+select:hover{
+	cursor:pointer;
+}
+
+select option{
+	background-color:white;
+}
+
+/*long form container selec*/
+#countryContainer .longInputBox select{
+	width: 245px;
+	text-indent: 81px;
+}
+
+#countryContainer .formInputContainer span{
+	position:absolute;
+	top:5px;
+	left: 261px;
+	font-size: 30px;
+    z-index: 1;
+}
+
+#submitContainer{
+	position: relative;
+    top: 8px;
+}
+/*submit button container*/
+#submitContainer .shortInputBox{
+	/*position: relative;
+    left: 50px;*/
+    width: 203px;
+	margin: 0 auto;
+}
+
+#submitContainer .formInputContainer{
+	background-color: #1a3a64;
+    color: white;
+    outline: none;
+    border: none;
+    width: 203px;
+}
+
+/*submit button text*/
+#submitContainer .formInputContainer span{
+	/*text-align: center;
+    position: relative;
+    top: 13px;
+    left: 63px;
+	*/
+		width: 50px;
+    height: 17px;
+    margin: 0 auto;
+    position: absolute;
+    position: relative;
+    top: 30%;
+}
+
+#submitContainer:hover{
+	cursor:pointer;
+}
+
+#submitForm input{
+	   /* width: 50px; */
+   height: 17px;
+   margin: 0 auto;
+   position: absolute;
+   position: relative;
+   top: 30%;
+   background-color: #1a3a64;
+   background-color: transparent;
+   color: white;
+   font-size: 16px;
+   text-transform: uppercase;
+   outline:none;
+   width: 207px;
+   height: 45px;
+   top:0;
+}
+#submitForm .formInputContainer:hover{
+	cursor: pointer;
+    box-shadow: 0 0 2px rgba(0,0,0,.12), 0 2px 2px rgba(0,0,0,.2);
+    background-color: #234b80;
+}

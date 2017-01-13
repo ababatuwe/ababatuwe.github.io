@@ -1,0 +1,180 @@
+<html>
+	<head>
+		<!--LIBRARIES-->
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><!--font awesome-->
+		<link rel="stylesheet" href="simple-js-modal-master/css/style.css" /><!--modal css-->
+	
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/base/jquery-ui.css" /><!--jquery-->
+		<link type="text/css" rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" /><!--jquery mobile-->
+	
+		<!--FONTS-->
+		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'> <!--Roboto from google fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'><!--Roboto slabfrom google fonts-->
+	
+		<!--STYLES-->
+		<link rel="stylesheet" type="text/css" href="css/signUp.css">
+		
+	</head>
+	<body>
+		<!--FORM BODY-->
+		<main id="myContainer" class="formBody">
+			<!--CONTENT-->
+			<div class="content">
+			
+				<!--HEADER-->
+				<div id="formHeader">
+					<span class="bold">HYPERWIRE</span> IS COMING.
+					<br/>
+					PLEASE FILL OUT THE FORM BELOW TO BECOME
+					<br/>
+					ONE OF OUR FIRST USERS.
+				</div><!--form header ends-->
+				
+				<!--FORM CONTENT-->
+				<div class="formContent">
+					<!--NAME INFO-->
+					<!--Name Container-->
+					<div id="nameContainer" class="formElementContainer">
+						<!--First Name Container-->
+						<div class="shortInputBox">
+							<label for="firstNameInput" class="leftAlignedText">FIRST NAME</label>
+							<div class="formInputContainer outline">
+								<input type="text" class="formInputText formInputName" id="firstNameInput"></input>
+							</div>
+						</div><!--first name container ends-->
+						
+						<!--Last Name Container-->
+						<div class="shortInputBox">
+							<label for="lastNameInput" class="leftAlignedText">LAST NAME</label>
+							<div class="formInputContainer outline">
+								<input type="text" class="formInputText formInputName" id="lastNameInput"></input>
+							</div>
+						</div><!--last name container ends-->
+					</div><!--nameContainer ends-->
+					
+					<!--EMAIL INFO-->
+					<!--Email Container-->
+					<div id="emailContainer" class="formElementContainer">
+						<div class="longInputBox">
+							<label for="emailInput" class="leftAlignedText">EMAIL ADDRESS</label>
+							<div class="formInputContainer outline">
+								<input type="text" class="formInputText" id="emailInput"></input>
+							</div>
+						</div>
+					</div><!--email container ends-->
+						
+					<!--DATE INFO-->
+					<div id="dateContainer" class="formElementContainer">
+					<label for="monthInput" class="leftAlignedText">WHEN LAST DID YOU SEND MONEY?</label>
+					<!--Month Container-->
+						<div class="shortInputBox">
+							<div class="formInputContainer noOutline">
+								<select type="text" class="formInputText" id="monthInput">
+									<option>JANUARY</option>
+									<option>FEBRUARY</option>
+									<option>MARCH</option>
+									<option selected="selected">APRIL</option>
+									<option>MAY</option>
+									<option>JUNE</option>
+									<option>JULY</option>
+									<option>AUGUST</option>
+									<option>SEPTEMBER</option>
+									<option>OCTOBER</option>
+									<option>NOVEMBER</option>
+									<option>DECEMBER</option>
+								</select>
+							</div>
+						</div><!--month container ends-->	
+						
+						<!---Year Container-->
+						<div class="shortInputBox">
+							<div class="formInputContainer noOutline">
+								<select type="text" class="formInputText" id="yearInput">
+									<option>2016</option>
+									<option selected="selected">2015</option>
+									<option>2014</option>
+									<option>2013</option>
+									<option>2012</option>
+									<option>2011</option>
+									<option>2010</option>
+									<option>2009</option>
+									<option>2008</option>
+									<option>2007</option>
+								</select>
+							</div>
+						</div><!--year container ends-->
+					</div><!--date container ends-->
+
+					<!--COUNTRY INFO-->
+					<div id="countryContainer" class="formElementContainer">
+					<!--Country Container-->
+						<div class="longInputBox">
+							<label for="countryInput" class="leftAlignedText">WHAT COUNTRY DID YOU SEND IT TO?</label>
+							<div class="formInputContainer noOutline">
+								<span class="fa fa-angle-down"></span>
+								<select type="text" class="formInputText" id="countryInput">
+									<option>KENYA</option>
+									<option>NIGERIA</option>
+									<option selected="selected">UGANDA</option>
+								</select>
+							</div>
+						</div>
+					</div><!--country info ends-->	
+					
+					<!--SUBMIT BUTTON-->
+					<!--submit Container-->
+					<div id="submitContainer" class="formElementContainer"><!--onclick="window.open('landing-JoinConfirm.html','_self)-->
+						<!--First Name Container-->
+						<div class="shortInputBox">
+							<div class="formInputContainer">
+								<span>JOIN BETA</span>
+								<!--<input type="text" class="formInputText formInputName" id="firstNameInput"></input>-->
+							</div>
+						</div><!--first name container ends-->
+					</div><!--submit container ends-->
+				</div><!---form content ends-->
+			</div><!--content ends-->
+		</main><!--form body ends-->
+		
+			
+		<!--Modal 1-->
+		<div id="myModal" class="Modal is-hidden is-visuallyHidden">
+			<!-- Modal content -->
+			<div class="Modal-content">
+				<span id="closeModal" class="Close">&times;</span>
+				<iframe id="modal1" src="landing-JoinConfirm.html" style="	width:440px;height:352px;scroll:no; margin: 0 auto; position: relative; top:10px;"></iframe>
+			</div>
+		</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script><!--jquery library-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script><!--jquery ui library-->
+    <!-- <script src="http://gregfranko.com/jquery.selectBoxIt.js/js/jquery.selectBoxIt.min.js"></script> -->
+	<script src="simple-js-modal-master/js/source/confirmForm.js"></script><!--modal js library-->
+
+	<script>
+		$("#sendContainer input").keypress(function(){
+			var inputText = $("#sendContainer input").val();
+			//alert(inputText);
+			$("#receiveContainer input").val(inputText * 2400);
+		});
+		
+		/*$(function() {
+			var selectBox = $("select").selectBoxIt();
+		});*/
+			/*$(function(){
+
+			$("select").selectBoxIt({
+				theme: "default",
+				defaultText: "Make a selection...",
+                autoWidth: false
+			});
+			$("select").change(function(){
+				alert("You selected: "+this.value+" from the Selectboxit plugin");
+			});
+			
+		});*/
+		
+	</script>
+
+	</body>
+</html/>

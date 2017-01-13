@@ -1,0 +1,105 @@
+/* General - specific customization
+----------------------------------------------------------------------------- */
+/*creating gernal classes and using them*/
+
+/* Typography
+--------------------------------------------- */
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+footer p {
+	font-size: 1rem;
+	text-align: center;
+}
+
+/* Containers
+--------------------------------------------- */
+
+.hero-unit {
+	font-weight: 200;
+	margin-bottom: 30px;
+}
+
+.hero-unit h1 {
+	font-weight: normal;
+	margin: 0;
+	letter-spacing: -1px;
+}
+
+.hero-unit p.lead {
+	margin-top: 0;
+}
+
+/* Background Colors
+--------------------------------------------- */
+
+.bg-blue {
+	background: #1E7FC0;
+	color: #fff;
+}
+
+.bg-dark-grey {
+	background: #333;
+	color: #fff;
+}
+
+/* Alignment
+--------------------------------------------- */
+
+.aligncenter {
+	text-align: center;
+}
+
+.alignright {
+	text-align: right;
+}
+
+.alignleft {
+	text-align: left;
+}
+
+/* Icons
+--------------------------------------------- */
+
+[class^="icon-"] {
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.icons {
+	margin-bottom: 20px;
+	height: 100px;
+	width: 100px;
+	margin: 0 auto;
+}
+
+.icons.round {
+	border-radius: 100px;
+}
+
+.icons-colored.yellow {
+	background: #ffb400;
+}
+
+.icons-colored.blue {
+	background: #1E7FC0;
+}
+
+.icons-colored.green {
+	background: #9FC300;
+}
+
+.icons-colored.red {
+	background: #E0594B;
+}
+
+.icons i {
+	display: block;
+	font-size: 2.25rem;
+	line-height: 100px;
+	color: rgba(0,0,0,.4);
+	text-align: center;
+}
