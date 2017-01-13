@@ -60,12 +60,27 @@ var btnClose2 = document.getElementById("closeConfirm");
 btnOpenConfirm.onclick = function() {
 	//close other modal
 	// validation fails if the input is 
-	var form1 = document.getElementById("signUp");  
-    if(form1.inputfield.value === "") {
+	//var form1 = document.getElementById("signUp");  
+    var fName = document.getElementById("firstNameInput");
+    var lName = document.getElementById("lastNameInput");
+    var email = document.getElementById("emailInput");
+    if(fName.value === "") {
 		  /*alert("Error: Input is empty!");*/
-		  form1.inputfield.focus();
+          console.log("firstName blank");
+		  fName.focus();
+		  return false;
+    }else if (lName.value === "") {
+		  /*alert("Error: Input is empty!");*/
+          console.log("lastName blank");
+		  lName.focus();
+		  return false;
+    }else if (email.value === "") {
+		  /*alert("Error: Input is empty!");*/
+          console.log("email blank");
+		  email.focus();
 		  return false;
     }else{
+        console.log("in else statement...")
 		modal.className = "Modal is-hidden is-visuallyHidden";
 		modal2.className = "Modal is-visuallyHidden";
 		setTimeout(function() {
