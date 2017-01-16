@@ -81,8 +81,8 @@ btnOpenConfirm.onclick = function() {
 		  return false;
     }else{
         
-        var win = window.open('../../../../../../landing-JoinConfirm.html','_blank');
-        win.focus();
+        // var win = window.open('../../../../../../landing-JoinConfirm.html','_blank');
+        // win.focus();
         console.log("in else");
 		modal.className = "Modal is-hidden is-visuallyHidden"; //hides form
 		//modal2.className = "Modal is-visuallyHidden"; 
