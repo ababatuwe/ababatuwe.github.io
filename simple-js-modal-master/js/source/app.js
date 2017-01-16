@@ -56,6 +56,16 @@ var btnOpenConfirm = document.getElementById("submitForm");
 // Get the close button
 var btnClose2 = document.getElementById("closeConfirm");
 
+function ValidateEmail(mail)   
+{  
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value))  
+  {  
+    return (true)  
+  }  
+    alert("You have entered an invalid email address!")  
+    return (false)  
+}  
+
 // Open the modal
 btnOpenConfirm.onclick = function() {
 	//close other modal
@@ -64,6 +74,7 @@ btnOpenConfirm.onclick = function() {
     var fName = document.getElementById("firstNameInput"); 
     var lName = document.getElementById("lastNameInput"); 
     var email = document.getElementById("emailInput"); 
+
     if(fName.value === "") {
 		  /*alert("Error: Input is empty!");*/
           console.log("fname blank");
@@ -74,9 +85,9 @@ btnOpenConfirm.onclick = function() {
           console.log("lname blank");
 		  lName.focus();
 		  return false;
-    }else if(email.value === "") {
+    }else if(email.value === "" || !ValidateEmail(email)) {
 		  /*alert("Error: Input is empty!");*/
-          console.log("email blank");
+          console.log("email error");
 		  email.focus();
 		  return false;
     }else{
