@@ -60,17 +60,36 @@ var btnClose2 = document.getElementById("closeConfirm");
 btnOpenConfirm.onclick = function() {
 	//close other modal
 	// validation fails if the input is 
-	var form1 = document.getElementById("signUp");  
-    if(form1.inputfield.value === "") {
+	//var form1 = document.getElementById("signUp");  
+    var fName = document.getElementById("firstNameInput"); 
+    var lName = document.getElementById("lastNameInput"); 
+    var email = document.getElementById("emailInput"); 
+    if(fName.value === "") {
 		  /*alert("Error: Input is empty!");*/
-		  form1.inputfield.focus();
+          console.log("fname blank");
+		  fName.focus();
+		  return false;
+    }else if(lName.value === "") {
+		  /*alert("Error: Input is empty!");*/
+          console.log("lname blank");
+		  lName.focus();
+		  return false;
+    }else if(email.value === "") {
+		  /*alert("Error: Input is empty!");*/
+          console.log("email blank");
+		  email.focus();
 		  return false;
     }else{
-		modal.className = "Modal is-hidden is-visuallyHidden";
-		modal2.className = "Modal is-visuallyHidden";
+        
+        var win = window.open('../../../../../../landing-JoinConfirm.html','_blank');
+        win.focus();
+        console.log("in else");
+		modal.className = "Modal is-hidden is-visuallyHidden"; //hides form
+		//modal2.className = "Modal is-visuallyHidden"; 
 		setTimeout(function() {
-		  modal2.className = "Modal";
-		}, 100);
+            console.log("in timeout");
+		  modal2.className = "Modal"; //showing confirmation form
+		}, 500);
 		container.parentElement.className = "gradient ModalOpen";//adds ModalOpen class to body
 		return true;
 	}
