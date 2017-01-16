@@ -509,7 +509,7 @@ font-family: "Avant";
     	);
 
 
-		$("#sendContainer input").keydown(function(){
+		$("#sendContainer input").keypress(function(){
 			var inputText = $("#sendContainer input").val();
 			//alert(inputText);
 			$("#receiveContainer input").val(inputText * fx.rates.KES);
