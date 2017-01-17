@@ -74,6 +74,8 @@ btnOpenConfirm.onclick = function() {
     var fName = document.getElementById("firstNameInput"); 
     var lName = document.getElementById("lastNameInput"); 
     var email = document.getElementById("emailInput"); 
+    var month = document.getElementById("#monthInput");
+    var year = document.getElementById("#yearInput");
 
     if(fName.value === "") {
 		  /*alert("Error: Input is empty!");*/
@@ -101,10 +103,47 @@ btnOpenConfirm.onclick = function() {
             console.log("in timeout");
 		  modal2.className = "Modal"; //showing confirmation form
 		}, 500);
+        postContactToGoogle();
 		container.parentElement.className = "gradient ModalOpen";//adds ModalOpen class to body
 		return true;
 	}
 }
+
+function postContactToGoogle(){
+	console.log("Posting to Google");
+    var fName = document.getElementById("firstNameInput").value; 
+    var lName = document.getElementById("lastNameInput").value; 
+    var email = document.getElementById("emailInput").value; 
+    var month = document.getElementById("monthInput").value;
+    var year = document.getElementById("yearInput").value;
+    // var country = document.getElementById("#country").value;
+    console.log("First Name: ", fName);
+    console.log("Last Name: ", lName);
+    console.log("Email : ", email);
+    console.log("Month : ", month);
+    console.log("Year : ", year);
+    if ((fName !== "") && (lName !== "") && (email !== "") && ((month !== ""))) {
+       	$.ajax({
+           	url: "https://docs.google.com/a/hyperafrica.com/forms/d/e/1FAIpQLSd-6UQ3YGYBMw3wro8kAaULIeUV77wCgmscfDqh2gw3IJ_eFQ/formResponse",
+            data: {"entry.1" : fName, "entry.2": lName, "entry.3" : email, "entry.4": month, "entry.5": year},
+            type: "POST",
+          	dataType: "xml",
+         	statusCode: {
+             	0: function (){
+                            console.log("Success");
+                        	//Success message
+                    	},
+                    	200: function (){
+                        	console.log("In 200");
+                        	//Success Message
+                    	}
+                	}
+            	});
+        	}
+        	else {
+            	//Error message
+        	}
+    	}
 
 // Close the modal
 btnClose2.onclick = function() {

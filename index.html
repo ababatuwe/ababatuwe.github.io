@@ -293,7 +293,7 @@ font-family: "Avant";
 			<!--FORM BODY-->
 		<main id="signUpForm" class="formBody" style="width: 562px; height:619px;scroll:no; position: absolute; top:30px;">
 			<!--CONTENT-->
-			<form  action="http://my.sendinblue.com/users/subscribe/" method="post" onsubmit="return false"><!--so can be validated-->
+			<form  id="hyperwire" method="post" onsubmit="return false">so can be validated
 			<div class="content">
 			
 				<!--HEADER-->
@@ -347,18 +347,18 @@ font-family: "Avant";
 						<div class="shortInputBox">
 							<div class="formInputContainer noOutline">
 								<select type="text" class="formInputText" id="monthInput">
-									<option>JANUARY</option>
-									<option>FEBRUARY</option>
-									<option>MARCH</option>
-									<option selected="selected">APRIL</option>
-									<option>MAY</option>
-									<option>JUNE</option>
-									<option>JULY</option>
-									<option>AUGUST</option>
-									<option>SEPTEMBER</option>
-									<option>OCTOBER</option>
-									<option>NOVEMBER</option>
-									<option>DECEMBER</option>
+									<option value="JANUARY">JANUARY</option>
+									<option value="FEBRUARY">FEBRUARY</option>
+									<option value="MARCH">MARCH</option>
+									<option selected="selected" value="APRIL">APRIL</option>
+									<option value="MAY">MAY</option>
+									<option value="JUNE">JUNE</option>
+									<option value="JULY">JULY</option>
+									<option value="AUGUST">AUGUST</option>
+									<option value="SEPTEMBER">SEPTEMBER</option>
+									<option value="OCTOBER">OCTOBER</option>
+									<option value="NOVEMBER">NOVEMBER</option>
+									<option value="DECEMBER">DECEMBER</option>
 								</select>
 							</div>
 						</div><!--month container ends-->	
@@ -367,16 +367,16 @@ font-family: "Avant";
 						<div class="shortInputBox">
 							<div class="formInputContainer noOutline">
 								<select type="text" class="formInputText" id="yearInput">
-									<option>2016</option>
-									<option selected="selected">2015</option>
-									<option>2014</option>
-									<option>2013</option>
-									<option>2012</option>
-									<option>2011</option>
-									<option>2010</option>
-									<option>2009</option>
-									<option>2008</option>
-									<option>2007</option>
+									<option value="2016">2016</option>
+									<option selected="selected" value="2015">2015</option>
+									<option value="2014">2014</option>
+									<option value="2013">2013</option>
+									<option value="2012">2012</option>
+									<option value="2011">2011</option>
+									<option value="2010">2010</option>
+									<option value="2009">2009</option>
+									<option value="2008">2008</option>
+									<option value="2007">2007</option>
 								</select>
 							</div>
 						</div><!--year container ends-->
@@ -468,6 +468,135 @@ font-family: "Avant";
 		</div><!--form body ends-->
 		</div>
 	</div>
+
+	<!--FIREBASE
+	<script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+	<script>
+  		// Initialize Firebase
+  		var config = {
+    		apiKey: "AIzaSyAp7_QLBT8qzH3f6jLADorCyLozUJF0SzM",
+    		authDomain: "hyperafrica.firebaseapp.com",
+    		databaseURL: "https://hyperafrica.firebaseio.com",
+    		storageBucket: "hyperafrica.appspot.com",
+    		messagingSenderId: "988389887937"
+  		};
+  		firebase.initializeApp(config);
+	</script>-->
+
+	<script>
+		function postContactToGoogle(){
+			console.log("Posting to Google")
+        	var fName = $j('#firstNameInput').val();
+			var lName = $j('#lastNameInput').val();
+        	var email = $j('#emailInput').val();
+			var month = $j('#monthInput').val();
+			var year = $j('#yearInput').val();
+        	if ((fName !== "") && (lName !== "") && (email !== "") && ((month !== ""))) {
+            	$j.ajax({
+                	url: "https://docs.google.com/a/hyperafrica.com/forms/d/e/1FAIpQLSd-6UQ3YGYBMw3wro8kAaULIeUV77wCgmscfDqh2gw3IJ_eFQ/formResponse",
+                	data: {"entry.1" : fName, "entry.2": lName, "entry.3" : email, "entry.4": month, "entry.5": year},
+                	type: "POST",
+                	dataType: "xml",
+                	statusCode: {
+                    	0: function (){
+ 
+                        	$j('#firstNameInput').val();
+ 							$j('#lastNameInput').val();
+							$j('#emailInput').val();
+							$j('#monthInput').val();
+							$j('#yearInput').val();
+                        	//Success message
+                    	},
+                    	200: function (){
+                        	$j('#firstNameInput').val();
+ 							$j('#lastNameInput').val();
+							$j('#emailInput').val();
+							$j('#monthInput').val();
+							$j('#yearInput').val();
+                        	//Success Message
+                    	}
+                	}
+            	});
+        	}
+        	else {
+            	//Error message
+        	}
+    	}
+	</script>
+
+	<!--<script>
+		$(function(){
+			//Keep track of data coming from firebase
+			var data = []
+
+			//create a new connection to firebase
+			var ref = new Firebase('https://hyperafrica.firebaseio.com');
+
+			//listen to data updates from firebase
+			ref.on("value", function(snapshot){
+				console.log(snapshot.val());
+				//when the data updatess at firebase, put it in the data variable
+				data = snapshot.val();
+			});
+
+			//Entire Form (handler)
+			$('#hyperwire').submit(function(event){
+				console.log("Here we are");
+				var $form = $(this);
+				console.log("Submit to Firebase");
+
+				//disable submit BUTTON--
+				// $form.find('').prop('disabled', true);
+
+				//get the values to send to Firebase
+				var fName = $('#firstNameInput').val();
+				console.log(fName);
+
+				var lName = $('#lastNameInput').val();
+				console.log(lName);
+
+				var email = $('#emailInput').val()
+				console.log(email);
+
+				var lastTimeSentMonth = $('#monthInput').val();
+				console.log(lastTimeSentMonth);
+
+				var lastTimeSentYear = $('#yearInput').val();
+				console.log(lastTimeSentYear);
+
+				var country = $('#countryInput').val();
+				console.log(country);
+
+				var newActivity = {
+					"fName": fName,
+					"lName": lName,
+					"email": email,
+					"Month": lastTimeSentMonth,
+					"Year": lastTimeSentYear,
+					"Country": country
+				};
+
+				data.push(newActivity);
+				console.log(data);
+
+				firebase.database().ref.set({
+					"fName": fName,
+					"lName": lName,
+					"email": email,
+					"Month": lastTimeSentMonth,
+					"Year": lastTimeSentYear,
+					"Country": country
+				});
+				// send the new data to Firebase
+				// ref.set(data, function(err){
+				// 	if(err){
+				// 		alert("Data no go");
+				// 	}
+				// });
+				return false;
+			});
+		})
+	</script>-->
 
 	<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script><!--jQuery library-->
 	<script   src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"   integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="   crossorigin="anonymous"></script> <!--jQuery UI library-->
