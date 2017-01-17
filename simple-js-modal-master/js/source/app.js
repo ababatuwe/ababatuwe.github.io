@@ -58,7 +58,7 @@ var btnClose2 = document.getElementById("closeConfirm");
 
 function ValidateEmail(mail)   
 {  
- if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value))  
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailInput.value))  
   {  
     return (true)  
   }  
@@ -85,7 +85,7 @@ btnOpenConfirm.onclick = function() {
           console.log("lname blank");
 		  lName.focus();
 		  return false;
-    }else if(email.value === "" || !ValidateEmail(email)) {
+    }else if(email.value === "") {
 		  /*alert("Error: Input is empty!");*/
           console.log("email error");
 		  email.focus();

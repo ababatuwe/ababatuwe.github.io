@@ -293,7 +293,7 @@ font-family: "Avant";
 			<!--FORM BODY-->
 		<main id="signUpForm" class="formBody" style="width: 562px; height:619px;scroll:no; position: absolute; top:30px;">
 			<!--CONTENT-->
-			<form name="signUpForm" id="signUp" action="http://my.sendinblue.com/users/subscribe/" method="post" onsubmit="return false"><!--so can be validated-->
+			<form  action="http://my.sendinblue.com/users/subscribe/" method="post" onsubmit="return false"><!--so can be validated-->
 			<div class="content">
 			
 				<!--HEADER-->
@@ -333,7 +333,9 @@ font-family: "Avant";
 						<div class="longInputBox">
 							<label for="emailInput" class="leftAlignedText">EMAIL ADDRESS</label>
 							<div class="formInputContainer outline">
+								<form name="myForm">
 								<input type="email" class="formInputText" id="emailInput" required></input>
+								</form>
 							</div>
 						</div>
 					</div><!--email container ends-->
