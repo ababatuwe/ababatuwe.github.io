@@ -123,27 +123,41 @@ function postContactToGoogle(){
     console.log("Month : ", month);
     console.log("Year : ", year);
     if ((fName !== "") && (lName !== "") && (email !== "") && ((month !== ""))) {
+        var url = "https://docs.google.com/a/hyperafrica.com/forms/d/e/1FAIpQLSd-6UQ3YGYBMw3wro8kAaULIeUV77wCgmscfDqh2gw3IJ_eFQ/formResponse"
+        var formData = {
+            "entry.103606336": fName,
+            "entry.1072330423": lName,
+            "entry.1473714068": email,
+            "entry.1021883871": month,
+            "entry.341895574": year
+        };
+
        	$.ajax({
-           	url: "https://docs.google.com/a/hyperafrica.com/forms/d/e/1FAIpQLSd-6UQ3YGYBMw3wro8kAaULIeUV77wCgmscfDqh2gw3IJ_eFQ/formResponse",
-            data: {"entry.1" : fName, "entry.2": lName, "entry.3" : email, "entry.4": month, "entry.5": year},
-            type: "POST",
-          	dataType: "xml",
+            type: 'POST',
+            url: url,
+            data: formData,
+          	dataType: "jsonp",
+            contentType: 'json',
+            cors: 'true',
+            proxy_v2: 'true',
          	statusCode: {
-             	0: function (){
-                            console.log("Success");
-                        	//Success message
-                    	},
-                    	200: function (){
-                        	console.log("In 200");
-                        	//Success Message
-                    	}
-                	}
-            	});
-        	}
-        	else {
+             	0: function(){
+                    console.log("Success");
+                	//Success message
+            	},
+               	200: function (){
+                    console.log("In 200");
+                    //Success Message
+                },
+                404: function() {
+                    console.log("404");
+                }
+            }
+        });
+    } else {
             	//Error message
         	}
-    	}
+    }
 
 // Close the modal
 btnClose2.onclick = function() {
